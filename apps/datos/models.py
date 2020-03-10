@@ -30,7 +30,7 @@ class Avistamiento(models.Model):
     autor = models.CharField(max_length=128)
     observación = models.TextField(null=True,blank=True)
     especie = models.ManyToManyField(Especie)
-    lugar = models.ManyToManyField(Lugar) 
+    lugar = models.ForeignKey(Lugar,null=True,blank=True,on_delete=models.CASCADE) 
     
     def __str__(self):
         return 'ID={},Autor={}'.format(self.pk, self.autor)
