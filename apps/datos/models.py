@@ -9,7 +9,7 @@ class Especie(models.Model):
 
     def __str__(self):
         return self.n_comun
-        
+
 
 class Lugar(models.Model):
     pais = models.CharField(max_length=128)
@@ -21,7 +21,7 @@ class Lugar(models.Model):
     def __str__(self):
         return self.nombre
 
-
+  
 
 class Avistamiento(models.Model):
     
